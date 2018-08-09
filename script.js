@@ -7,17 +7,27 @@ var time_counter = document.getElementById('time-counter');
 var myscore = document.getElementById('score');
 var gameover_msg= document.getElementById('gameover-msg');
 time_counter.innerHTML = counter;
+var alphabets = 'abcdefghijklmnopqrstuvwxyz';
+var myword = '';
+var wordLength = 5;
+    for(var i=0 ; i<wordLength ; i++)
+    {
+        myword += alphabets.charAt((Math.trunc(Math.random()*100))%26);
+    }
+     word.innerHTML = myword;
 
-var words = ['sumit','amit','belongs','programming','javascript','compatibility','akshat','simran','opportunity','academics','suraj','learning','develop','actual','java','python','mirror','cable','luggage','blanket','laptop','desktop','qwerty','keypad','android','lenovo','register','processor','conditioner','football'];
-   
-word.innerHTML = words[(Math.trunc(Math.random()*100))%30];
  input_field.onkeyup = function(){
       if(word.innerHTML == input_field.value)
       {
+          myword = '';
           counter = 6;
           score += 1;
           input_field.value = '';
-          word.innerHTML = words[(Math.trunc(Math.random()*100))%30]
+         for(var i=0 ; i<wordLength ; i++)
+          {
+        myword += alphabets.charAt((Math.trunc(Math.random()*100))%26);
+          }
+          word.innerHTML = myword;
       }
  }
 
