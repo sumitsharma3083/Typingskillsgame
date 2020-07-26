@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Game-Typing a Word In Certain time</title>
+    <title>Typing skills game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-     <div id="container">  
-         <h1>Typing speed vs time</h1>
-         <p>Type a following word in 5 second</p>
-         <h1 id="word"></h1>
-        <input type="text" placeholder="Type your Word..." id="input-field">
-        <h5 id="gameover-msg">
-           GAME OVER...
-        </h5>
-        <p id="showtime-field">Time Left: <span id="time-counter"></span></p>
-        <p id="showscore-field">Score:<span id="score"></span></p>
-     </div>
-       
-      <div id="instruction-container">
-          <h1>Instructions</h1>
-          <p>
-              In this game, You will get 5 seconds and you need to type the correct word that you will get . With every correct word you will get a 1 score and after every correct word The word will be change and you will get new 5 seconds. If you will fail to type the correct word The game will be over.. 
-              SO Enjoy The Game And Improve Your Typing Skills As Well
-          </p>
-      </div>
+<body> 
+    <div class="level_overlay">
+            <button class="level_btn" level="easy">easy</button>
+            <button class="level_btn" level="medium">medium</button>
+            <button class="level_btn" level="hard">hard</button>
+    </div>
+    <div class="main-wrapper">
+        <div id="container">  
+            <h1 style="text-transform: uppercase;">Typing speed vs time</h1>
+            <p>Type a following word in 5 second</p>
+            <h1 id="word"></h1>
+           <input type="text" placeholder="Type your Word..." id="input-field">
+           <h5 id="gameover-msg">
+              GAME OVER...
+           </h5>
+
+          <button class="action_btn" value="start">START</button>
+
+           <p id="showtime-field">Time Left: <span id="time-counter"></span> seconds</p>
+           <p id="showscore-field">Score:<span id="score"></span></p>
+        </div>
+          
+         <div id="instruction-container">
+             <h1>Instructions</h1>
+             <p>
+                 In this game, You will get 5 seconds and you need to type the correct word that you will get . With every correct word you will get a 1 score and after every correct word The word will be change and you will get new 5 seconds. If you will fail to type the correct word The game will be over.. 
+                 SO Enjoy The Game And Improve Your Typing Skills As Well
+             </p>
+         </div>
+    </div>
+    
     <script src="script.js">
     </script>
    
